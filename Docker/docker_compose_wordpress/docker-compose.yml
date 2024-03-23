@@ -16,7 +16,7 @@ services:
       - mysql-db:/var/lib/mysql
 
     networks:
-      - wordpress-networks
+      - wordpress-network
     
     ports:
       - "3306:3306"
@@ -41,16 +41,12 @@ services:
       - "8080:80"
     
     networks:
-      - wordpress-networks
+      - wordpress-network
 
 volumes:
   mysql-db:
   wordpress-vol:
 
 networks:
-  wordpress-networks:
+  wordpress-network:
     driver: bridge
-  
-
-    
-    
