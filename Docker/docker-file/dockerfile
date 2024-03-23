@@ -1,0 +1,5 @@
+FROM python:latest
+LABEL type="python"
+LABEL maintainer="nasim1039@gmail.com"
+ADD srcipt.py /
+CMD [ "python" "./srcipt.py" ]
