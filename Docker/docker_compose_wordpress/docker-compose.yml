@@ -8,10 +8,10 @@ services:
     restart: always
 
     environment:
-      - MYSQL_ROOT_PASSWORD=mysqlroot
-      - MYSQL_DATABASE=wordpress
-      - MYSQL_USER=wordpressuser
-      - MYSQL_PASSWORD=wordpresspass
+      - MYSQL_ROOT_PASSWORD: mysqlroot
+      - MYSQL_DATABASE: wordpress
+      - MYSQL_USER: wordpressuser
+      - MYSQL_PASSWORD: wordpresspass
       
     volumes:
       - mysql-db:/var/lib/mysql
@@ -31,10 +31,10 @@ services:
     restart: always
 
     environment:
-      - WORDPRESS_DB_HOST=db:3306
-      - WORDPRESS_DB_USER=wordpressuser
-      - WORDPRESS_PASSWORD=wordpresspass
-      - WORDPRESS_DB_NAME=wordpress
+      - WORDPRESS_DB_HOST: db:3306
+      - WORDPRESS_DB_USER: wordpressuser
+      - WORDPRESS_PASSWORD: wordpresspass
+      - WORDPRESS_DB_NAME: wordpress
 
     
     volumes:
