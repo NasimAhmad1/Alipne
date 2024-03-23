@@ -12,6 +12,7 @@ services:
       - MYSQL_DATABASE=wordpress
       - MYSQL_USER=wordpressuser
       - MYSQL_PASSWORD=wordpresspass
+      
     volumes:
       - mysql-db:/var/lib/mysql
 
@@ -33,6 +34,8 @@ services:
       - WORDPRESS_DB_HOST=db:3306
       - WORDPRESS_DB_USER=wordpressuser
       - WORDPRESS_PASSWORD=wordpresspass
+      - WORDPRESS_DB_NAME=wordpress
+
     
     volumes:
       - wordpress-vol:/var/www/html
