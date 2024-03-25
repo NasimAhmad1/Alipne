@@ -26,7 +26,7 @@ services:
    ports:
      - "6379:6379"
    volumes:
-     - "app/redis_data:/data"
+     - "redisdata:/data"
    deploy:
      placement:
        constraints: [node.hostname == manager2]
@@ -35,4 +35,8 @@ services:
     - webnet
 networks:
   webnet:
+
+volumes:
+  redisdata:
+  
          
