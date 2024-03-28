@@ -13,7 +13,7 @@ services:
      networks:
       - backend
      volumes:
-      - dbdata: /var/lib/postgressql/data
+      - dbdata:/var/lib/postgressql/data
 
    vote:
      image: dockersamples/examplevotingapp_vote
