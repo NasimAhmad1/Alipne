@@ -1,5 +1,5 @@
 resource "aws_key_pair" "my-key" {
-    key_name = my-key
+    key_name = "my-key"
     public_key = file( var.PATH_TO_KEY)
   
 }
