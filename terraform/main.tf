@@ -33,7 +33,7 @@ resource "aws_instance" "k8" {
     ami = var.image_name
     key_name = aws_key_pair.my-key.key_name
     instance_type = var.instance_type
-    vpc_security_group_ids = [ "$(aws_security_group.mysg.id)"]
+    vpc_security_group_ids = ["${aws_security_group.mysg.id}"]
 
     tags = {
       Name = "kubernet"
